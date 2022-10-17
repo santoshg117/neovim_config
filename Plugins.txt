@@ -1,0 +1,4 @@
+call plug#begin('~/.config/nvim/autoload')
+
+Plug 'catppuccin/nvim', {'as': 'catpupuccin'}
+
