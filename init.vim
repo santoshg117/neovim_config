@@ -5,8 +5,8 @@ Plug 'vim-airline/vim-airline'
 Plug 'zchee/deoplete-jedi'
 Plug 'jiangmiao/auto-pairs'
 Plug 'arcticicestudio/nord-vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'sheerun/vim-polyglot'
+Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile && yarn build', 'branch': 'main' }
 
 call plug#end()
 
