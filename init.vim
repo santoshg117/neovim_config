@@ -9,7 +9,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile && yarn build', 'branch': 'main' }
 Plug 'scrooloose/nerdtree'
 Plug 'ryanoasis/vim-devicons'
-
+Plug 'preservim/nerdtree'
 
 call plug#end()
 
@@ -19,6 +19,8 @@ autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 filetype plugin indent on
 syntax on
 colorscheme nord
+
+let mapleader=","
 
 " move line or visually selected block - alt+j/k
 inoremap <A-j> <Esc>:m .+1<CR>==gi
@@ -42,6 +44,12 @@ vnoremap <A-k> :m '<-2<CR>gv=gv
 :inoremap kj <Esc>
 :vnoremap jk <Esc>
 :vnoremap kj <Esc>
+
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
+
 
 " open new split panes to right and below
 set splitright
